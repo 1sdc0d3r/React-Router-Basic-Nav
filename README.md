@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Router Basic Nav
 
-## Available Scripts
+Topics:
 
-In the project directory, you can run:
+* Single Page Applications
+* React Router V4 (react-router-dom)
+* Routing, declarative component based routing
+* Path and Component
 
-### `yarn start`
+## Project Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* A starter pack project for all things React Router. Learn to set up a basic routing system within an application. Use this application to help guide your learning over the next couple of days.
+* **Note** that this project has already been boilerplated for you. There is no need to run any installation steps beyond `yarn install`.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Initialize Project
 
-### `yarn test`
+- [ ] cd into the repository and run `yarn install`
+- [ ] run `yarn start`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Steps for implementing React Router
 
-### `yarn build`
+- [ ] You'll notice we've already installed `react-router-dom` for you.
+- [ ] `import` your BrowserRouter as Router inside your `index.js` file.
+- [ ] Wrap your `<App />` component that you're passing to `ReactDOM.render()` with your new `Router` component.
+- [ ] open up your chrome `REACT DEV TOOLS` and notice your app is now all wrapped in `BrowserRouter`
+- [ ] inside the `REACT DEV TOOLS` expand `<BrowserRouter>` and highlight `<Router>` and notice that here is a `"history"` object on props and a `"match"` object on its state. These two objects are how all of our Router is going to work. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps for "Declaring" your routes
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [ ] Inside of your `App.js` file `import { Route } from 'react-router-dom';`
+- [ ] This is where we're going to declare and specify our router.
+- [ ] Create 3 `<Route />` setting their `path` prop equal to `/`, `/about`, `/contact` with their respective components.
+- [ ] Be sure to include the `exact` prop on the root component for `/` to make sure that it's rendering the exact component and not all the other components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps for setting up your Navigation
 
-### `yarn eject`
+- [ ] Inside of `Navigation.js` `import { Link } from 'react-router-dom'`.
+- [ ] Declare the `to` as the href on `<Link>` and specify the correct routes for your app to navigate towards.
+- [ ] Head over to your app and start navigating. You should be able to see your URLS changing their paths as you go. Each path should display the proper component. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Resources
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [Code Sandbox from Lecture](https://codesandbox.io/s/n58oqgwmP)
+* [React Router 4 Quick Start Guide](https://reacttraining.com/react-router/web/guides/quick-start)

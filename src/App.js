@@ -1,14 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Route, Link } from "react-router-dom";
-import { Home, About, Contact, Navigation } from "./components";
+import { Home, About, Contact, Navigation } from "./components/index";
 
 function App() {
   return (
-    <div>
-      <Navigation />
-    </div>
+    <>
+      {/* TODO add exact to home Route */}
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      <div>
+        <Navigation />
+      </div>
+    </>
   );
 }
 
